@@ -6,7 +6,18 @@ class Mahasiswa {
 private:
 	string nama;
 public:
-	friend void setNama(Mahasiswa& a, sring);
+	friend void setNama(Mahasiswa& a, string);
 };
 
-void setNama
+void setNama(Mahasiswa& a, string pNama) {
+	a.nama = pNama;
+	cout << "Nama: " << a.nama;
+}
+int main()
+{
+	Mahasiswa mhs;
+	setNama(mhs, "Joko Kumat");
+	cout << endl;
+	system("pause");
+	return 0;
+}
